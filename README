@@ -1,0 +1,22 @@
+1. Requirements:
+mysql-connector-java version >= 8.0.1 
+
+2. How to Run?
+a. execute sql paper_reviews.sql
+b. execute sql data.sql
+c. Modify class PaperReviewDriver member USER PSWD to your local mysql username and password
+   and Modify DATABASE connector string if your mysql local port is not 3306
+d. compile PaperReviewDriver.java
+e. java PaperReviewDriver and results will printed in the console
+
+3. Application Design
+application does not process params from command line
+for query 1, pass author's email to method getPaperDetailByAuthor 
+for query 2, pass paper id and review recommendation to getReviewsByPaper
+for query 3, just call getCountSubmittedPaper, it will count all papers from table paper
+for query 4, first generate a random email as author id by genRandomAuthorId
+pass author info and paper info to submitPaper
+for query 5, pass the first author's id in table author to removeAuthor
+
+   
+   
